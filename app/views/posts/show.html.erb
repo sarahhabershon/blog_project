@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @this_post.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @this_post.body %>
+</p>
+
+<%= form_for :comment, url: comments_path do |x| %>
+  <p>
+    <%= x.text_field :body %>
+  </p>
+<% end %>
+
+<%= link_to "Home", posts_path %>
